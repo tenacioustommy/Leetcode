@@ -8,8 +8,5 @@ else:
     res=[]
     for i in range(len(s)):
         list_set=list(set_)
-        if s[i]==list_set[0]:
-            res.append(list_set[1])
-        else:
-            res.append(list_set[0]         )
+        res.append(list_set[(list_set.index(s[i])+1)%len(list_set)])
     print(''.join(res))
